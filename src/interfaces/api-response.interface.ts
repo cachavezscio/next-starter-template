@@ -9,5 +9,5 @@ export interface ApiResponse {
     content?: string[];
     published?: string[];
   };
-  data?: Idea;
+  data?: Idea | any; // Extend this interface to include more data
 }

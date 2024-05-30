@@ -1,23 +1,27 @@
 import { getProfile } from '@/actions';
 import { Skeleton } from '@/components';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import { Suspense } from 'react';
 import UserPopover from '../dropdown/user-dropdown';
 
 export interface HeaderProps {
   children?: React.ReactNode;
+  metadata: Metadata;
 }
 
 const UserSkeleton = () => {
   return <Skeleton className="h-[66px] w-[66px] rounded-lg" />;
 };
-export async function Header() {
+
+export async function Header({ metadata }: HeaderProps) {
   const user = await getProfile();
+
   return (
     <section className="w-full border-b border-solid border-b-border bg-card/5 backdrop-blur-sm">
       <header className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
-          <h1 className="text-xl font-bold">🪅 Piñata Template</h1>
+          <h1 className="text-xl font-bold">{metadata?.title?.toString()}</h1>
           <Suspense fallback={<UserSkeleton />}>
             <div className="flex items-center">
               <UserPopover>

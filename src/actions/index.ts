@@ -1,6 +1,6 @@
 // Default external getter example
-export { getDataFromVercelBlog } from './api-default/api-default';
-export type { VercelBlogPostI } from './api-default/api-default';
+export { getDataFromVercelBlog } from './fetch/external-request';
+export type { VercelBlogPostI } from './fetch/external-request';
 // Authentication actions
 export { getCurrentUser } from './auth/get-current-user';
 export { getProfile } from './auth/get-profile';

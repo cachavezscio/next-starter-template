@@ -8,8 +8,8 @@ export interface HomeRouteInterface {
 
 export function GET(): NextResponse<HomeRouteInterface> {
   return NextResponse.json({
-    message: 'Hello World',
+    message: 'Hello Scioneer!',
     version: 1,
-    owner: 'Piñata',
+    owner: 'Scio Consulting',
   });
 }

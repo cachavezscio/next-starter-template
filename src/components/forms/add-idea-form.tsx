@@ -23,11 +23,7 @@ export interface AddIdeaFormProps {
 
 function Submit() {
   const { pending } = useFormStatus();
-  return (
-    <Button disabled={pending}>
-      {pending ? <ProgressIndicator color="text-foreground" /> : 'Share Idea'}
-    </Button>
-  );
+  return <Button disabled={pending}>{pending ? <ProgressIndicator /> : 'Share Idea'}</Button>;
 }
 
 const InputError = ({ error }: { error: string }) => {
