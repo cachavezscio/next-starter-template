@@ -1,3 +1,4 @@
+
 # Next.js Starter Template 
 This Next.js starter template provides a solid foundation for building web applications. It includes the following features:
 
@@ -10,6 +11,8 @@ This Next.js starter template provides a solid foundation for building web appli
 To get started with this template, follow these steps:
 
 1. Clone the repository:
+> Take a look to this: https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template
+   
   ```bash
   git clone https://github.com/your-username/your-repo.git
   ```
